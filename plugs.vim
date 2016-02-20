@@ -2,7 +2,8 @@
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 "
 " This is the personal neovim configuration file of Renato Utsch.
-" It is largely based on Steve Francia's spf13 vim distribution.
+" It is largely based on Steve Francia's spf13 vim distribution and bling's
+" dotvim distribution.
 "
 " The objective with this dotnvim is to make a light but useful distribution
 " specifically for neovim. The settings and plugins I use in this
@@ -69,7 +70,7 @@
     Plug 'tpope/vim-commentary'
     Plug 'godlygeek/tabular'
     Plug 'benekastah/neomake' " {
-        if isdirectory(expand("~/.vim/plugged/neomake"))
+        if isdirectory(expand("~/.config/nvim/plugged/neomake"))
             autocmd! BufEnter,BufWritePost * Neomake
         endif
     " }

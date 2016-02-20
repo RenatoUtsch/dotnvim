@@ -2,7 +2,8 @@
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 "
 " This is the personal neovim configuration file of Renato Utsch.
-" It is largely based on Steve Francia's spf13 vim distribution.
+" It is largely based on Steve Francia's spf13 vim distribution and bling's
+" dotvim distribution.
 "
 " The objective with this dotnvim is to make a light but useful distribution
 " specifically for neovim. The settings and plugins I use in this
@@ -68,6 +69,15 @@
     endfunction
 " }
 
+" Plugs {
+    call plug#begin('~/.config/nvim/plugged')
+
+    source ~/.config/nvim/dotnvim/plugs.vim
+
+    " Add plugins to &runtimepath
+    call plug#end()
+" }
+
 " General {
     set background=dark         " Assume dark background
     filetype plugin indent on   " Automatically detect file types.
@@ -84,6 +94,8 @@
 
     " Automatically switch to the current file directory when a new buffer is
     " opened.
+    "set autochdir
+    "autocmd BufEnter * silent! lcd %:p:h
     autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
     set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
@@ -124,9 +136,16 @@
 " }
 
 " nvim UI {
-    set tabpagemax=15               " Only show 15 tabs
-    set showmode                    " Display the current mode
-    set cursorline                  " Highlight current line
+    " Don't change the colorscheme until the plugins are installed to avoid
+    " error messages.
+    if isdirectory(expand("~/.config/nvim/plugged"))
+        exec 'colorscheme '.g:settings.colorscheme
+    endif
+
+    set tabpagemax=15                       " Only show 15 tabs
+    set showmode                            " Display the current mode
+    set cursorline                          " Highlight current line
+    let &colorcolumn=g:settings.max_column  " Highlight max_column
 
     highlight clear SignColumn      " SignColumn should match background
     highlight clear LineNr          " Current line number row will have same background color in relative mode
@@ -196,22 +215,4 @@
 
     " Easier formatting
     nnoremap <silent> <leader>q gwip
-" }
-
-" Plugs {
-    call plug#begin('~/.vim/plugged')
-
-    source ~/.config/nvim/dotnvim/plugs.vim
-
-    " Add plugins to &runtimepath
-    call plug#end()
-" }
-
-" Finishing touches {
-    " Don't change the colorscheme until the plugins are installed to avoid
-    " error messages.
-    if isdirectory(expand("~/.vim/plugged"))
-        exec 'colorscheme '.g:settings.colorscheme
-    endif
-
 " }
