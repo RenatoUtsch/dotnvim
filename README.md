@@ -4,8 +4,11 @@ This is a distribution built specifically for neovim, with extensibility and per
 ## Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
 
-1. Clone this repository into your `~/.config/nvim` folder (so that a `~/.config/nvim/dotnvim` folder is created)
-2. Download [vim-plug's](https://github.com/junegunn/vim-plug) `plug.vim` file and put it in the `~/.config/nvim/autoload` directory (see the project's page for more instructions)
+1. Download [vim-plug's](https://github.com/junegunn/vim-plug) `plug.vim` file and put it in the `~/.config/nvim/autoload` directory (see the project's page for more instructions)
+2. Clone this repository into your `~/.config/nvim` folder by running:
+```
+git clone https://github.com/RenatoUtsch/dotnvim ~/.config/nvim/dotnvim
+```
 3. Create the following shim and save it as `~/.config/nvim/init.vim`
 ```
 let g:settings = {}
