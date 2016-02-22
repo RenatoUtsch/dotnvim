@@ -18,12 +18,13 @@ source ~/.config/nvim/dotnvim/init.vim
 ## Troubleshooting
 ### The colors are messed up
 This distribution uses the `base16-default` theme with 256 colors. For the colors to display properly you have to use base16-default's theme on your terminal. [base16-shell](https://github.com/chriskempson/base16-shell) is a helper for that and I suggest reading it. Instructions for bash and zsh are provided below:
+
 1. `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
 2. In `./zshrc` or `./bashrc` place the following lines:
 ```
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL<Paste>
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 ```
 3. Reopen your shell
 

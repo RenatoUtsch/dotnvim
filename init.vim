@@ -81,16 +81,7 @@
 " General {
     set background=dark         " Assume dark background
     filetype plugin indent on   " Automatically detect file types.
-
-    " Clipboard {
-        if has('clipboard')
-            if has('unnamedplus')  " When possible use the + register
-                set clipboard=unnamed,unnamedplus
-            else         " On mac and Windows, use the * register
-                set clipboard=unnamed
-            endif
-        endif
-    " }
+    set clipboard+=unnamedplus  " Always use the clipboard.
 
     " Automatically switch to the current file directory when a new buffer is
     " opened.
