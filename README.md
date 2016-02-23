@@ -9,11 +9,13 @@ Easy way through bash and curl:
 
 Copy to your terminal, and press enter. Done.
 
-Please note that this will also change the colors on your terminal, because the terminal colors affect neovim's colors. It may also be a good idea to take a look at the troubleshooting section, mainly "the status line is showing weird symbols".
+Please note that this install script is quite invasive and will make changes to your `.zshrc` and `.bashrc` and also change the colors on your terminal, because the terminal colors affect neovim's colors. If you do not want to run such an install script, please see the manual installation instructions below.
+
+It may also be a good idea to take a look at the troubleshooting section after installation, mainly "the status line is showing weird symbols".
 
 *Requires bash or zsh, git, nvim and curl.*
 
-## Installation
+## Manual Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
 
 1. Download [vim-plug's](https://github.com/junegunn/vim-plug) `plug.vim` file and put it in the `~/.config/nvim/autoload` directory (see the project's page for more instructions)
@@ -28,7 +30,8 @@ let g:settings.version = 1
 source ~/.config/nvim/dotnvim/init.vim
 ```
 4. Startup neovim and run `:PlugInstall`
-5. Done!
+5. Install the terminal colors ("The colors are messed up" section below) and the patched font ("The status line is showing weird symbols" section below)
+6. Done!
 
 ## Troubleshooting
 ### The colors are messed up
