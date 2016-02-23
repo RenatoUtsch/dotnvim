@@ -28,7 +28,7 @@ printColorConf(){
 }
 
 getColors(){
-    git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell;
+    git clone https://github.com/chriskempson/base16-shell.git $HOME/.config/base16-shell;
     command -v zsh >/dev/null 2>&1 && printColorConf ".zshrc";
     command -v bash >/dev/null 2>&1 && printColorConf ".bashrc";
 }

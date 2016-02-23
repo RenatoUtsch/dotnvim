@@ -5,7 +5,7 @@ This is a distribution built specifically for neovim, with extensibility and per
 
 Easy way through bash and curl:
 
-    curl https://raw.githubusercontent.com/RenatoUtsch/dotnvim/master/install.sh -L > install.sh && sh install.sh
+    curl https://raw.githubusercontent.com/RenatoUtsch/dotnvim/master/install.sh -L -o - | sh
 
 Copy to your terminal, and press enter. Done.
 
