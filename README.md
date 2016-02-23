@@ -5,11 +5,11 @@ This is a distribution built specifically for neovim, with extensibility and per
 
 Easy way through bash and curl:
 
-'''bash
-
     curl https://raw.githubusercontent.com/RenatoUtsch/dotnvim/master/install.sh -L > install.sh && sh install.sh
-'''
-Requires bash, git, nvim and curl.
+
+Copy to your terminal, and press enter. Done.
+
+*Requires bash, git, nvim and curl.*
 
 ## Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
