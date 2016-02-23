@@ -9,7 +9,9 @@ Easy way through bash and curl:
 
 Copy to your terminal, and press enter. Done.
 
-*Requires bash, git, nvim and curl.*
+Please note that this will also change the colors on your terminal, because the terminal colors affect neovim's colors. It may also be a good idea to take a look at the troubleshooting section, mainly "the status line is showing weird symbols".
+
+*Requires bash or zsh, git, nvim and curl.*
 
 ## Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
