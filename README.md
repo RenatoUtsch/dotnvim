@@ -5,6 +5,8 @@ This is a distribution built specifically for neovim, with extensibility and per
 
 Easy way through bash and curl:
 
+*Requires bash or zsh, git, nvim and curl.*
+
     curl https://raw.githubusercontent.com/RenatoUtsch/dotnvim/master/install.sh -L -o - | sh
 
 Copy to your terminal, and press enter. Done.
@@ -12,8 +14,6 @@ Copy to your terminal, and press enter. Done.
 Please note that this install script is quite invasive and will make changes to your `.zshrc` and `.bashrc` and also change the colors on your terminal, because the terminal colors affect neovim's colors. If you do not want to run such an install script, please see the manual installation instructions below.
 
 It may also be a good idea to take a look at the troubleshooting section after installation, mainly "the status line is showing weird symbols".
-
-*Requires bash or zsh, git, nvim and curl.*
 
 ## Manual Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
