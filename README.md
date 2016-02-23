@@ -1,6 +1,8 @@
 # RenatoUtsch's dotnvim
 This is a distribution built specifically for neovim, with extensibility and performance in mind. It is largely based on [spf13-vim](https://github.com/spf13/spf13-vim) and [bling.vim](https://github.com/bling/dotvim).
 
+## Quick installation
+
 ## Installation
 Before installation, ensure that you have neovim and neovim's python3 module (installed through pip3) installed and updated to the latest version.
 
