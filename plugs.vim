@@ -1,20 +1,24 @@
 " Modeline and Notes {
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 "
-" This is the personal neovim configuration file of Renato Utsch.
-" It is largely based on Steve Francia's spf13 vim distribution and bling's
-" dotvim distribution.
-"
-" The objective with this dotnvim is to make a light but useful distribution
-" specifically for neovim. The settings and plugins I use in this
-" configuration are the ones I find most useful, and I avoided adding a lot of
-" plugins to keep everything fast.
-"
-" This file specifies the plugins and their configuration.
+" Copyright 2017 Renato Utsch 
 "
 " This project is released under the Apache 2 license.
+" Licensed under the Apache License, Version 2.0 (the "License"); 
+" you may not use this file except in compliance with the License.
+" You may obtain a copy of the License at
 "
-" Find me at https://github.com/RenatoUtsch
+"     http://www.apache.org/licenses/LICENSE-2.0
+"
+" Unless required by applicable law or agreed to in writing, software
+" distributed under the License is distributed on an "AS IS" BASIS,
+" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+" See the License for the specific language governing permissions and
+" limitations under the License.
+" }
+
+" vim-neovim {
+    Plug 'noahfrederick/vim-neovim-defaults'
 " }
 
 " General {
@@ -24,21 +28,16 @@
     Plug 'tpope/vim-surround'
     Plug 'rhysd/conflict-marker.vim'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'vim-scripts/sessionman.vim'
     Plug 'benjifisher/matchit.zip' " {
         let b:match_ignorecase = 1
     " }
-    Plug 'vim-airline/vim-airline'
-    Plug 'powerline/fonts', { 'do': './install.sh' } " {
+    Plug 'vim-airline/vim-airline' " {
         let g:airline_powerline_fonts = 1
     " }
     Plug 'vim-airline/vim-airline-themes' " {
         let g:airline_theme = g:settings.airline_colorscheme
     " }
     Plug 'bling/vim-bufferline'
-    Plug 'easymotion/vim-easymotion' " {
-        nmap s <leader><leader>s
-    " }
     Plug 'mbbill/undotree' " {
         nnoremap <Leader>u :UndotreeToggle<CR>
         " If undotree is opened, it is likely one wants to interact with it
@@ -58,42 +57,15 @@
             \ }
     " }}
     Plug 'myusuf3/numbers.vim'
-    if executable('ag') " rking/ag.vim {
+    if executable('ag') " {
         Plug 'rking/ag.vim'
     endif
-    " }
 " }
 
 " Programming {
-    Plug 'tpope/vim-fugitive'
-    Plug 'mattn/gist-vim'
     Plug 'tpope/vim-commentary'
     Plug 'godlygeek/tabular'
-    Plug 'benekastah/neomake' " {
-        if isdirectory(expand("~/.config/nvim/plugged/neomake"))
-            autocmd! BufEnter,BufWritePost * Neomake
-        endif
-    " }
-    if has('python3') " Shougo/deoplete.nvim {
-        Plug 'Shougo/deoplete.nvim'
-        let g:deoplete#enable_at_startup = 1
-    endif
-    " }
-" }
-
-" HTML {
-    Plug 'amirh/HTML-AutoCloseTag'
     Plug 'hail2u/vim-css3-syntax'
-" }
-
-" Misc {
-    Plug 'rust-lang/rust.vim'
-    Plug 'spf13/vim-preview'
     Plug 'cespare/vim-toml'
-" }
-
-" User plugins {
-    if filereadable(expand("~/.config/nvim/plugs.vim"))
-        source ~/.config/nvim/plugs.vim
-    endif
+    Plug 'dcharbon/vim-flatbuffers'
 " }
