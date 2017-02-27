@@ -1,5 +1,5 @@
 # RenatoUtsch's dotnvim
-This is a distribution built specifically for neovim, with extensibility and performance in mind. It is largely based on [spf13-vim](https://github.com/spf13/spf13-vim) and [bling.vim](https://github.com/bling/dotvim).
+This is a distribution built for both vim8 and neovim, with extensibility and performance in mind. It is largely based on [spf13-vim](https://github.com/spf13/spf13-vim) and [bling.vim](https://github.com/bling/dotvim).
 
 ## Installation
 Before installation, ensure that you have either vim8 or neovim installed and updated to the latest version.
