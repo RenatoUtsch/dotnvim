@@ -25,6 +25,7 @@
 
 " nocompatible {
 set nocompatible
+set termguicolors
 " }
 
 " dotnvim settings {
@@ -32,10 +33,10 @@ set nocompatible
         let s:default_settings = {}
         let s:default_settings.default_indent = 4
         let s:default_settings.max_column = 80
-        let s:default_settings.colorscheme = 'base16-default-dark'
-        let s:default_settings.airline_colorscheme = 'base16_default'
+        let s:default_settings.colorscheme = 'gruvbox'
+        let s:default_settings.airline_colorscheme = 'gruvbox'
         let s:default_settings.gvim_font = 'DejaVu_Sans_Mono_for_Powerline:h10'
-        let s:default_settings.cache_dir = '.cache'
+        let s:default_settings.cache_dir = 'cache'
         let s:default_settings.config_dir = "~/.config/dotnvim"
     " }
 
@@ -58,7 +59,6 @@ set nocompatible
 
         " set Vim-specific sequences for RGB colors
         set term=xterm
-        set termguicolors
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         inoremap <Char-0x07F> <BS>
@@ -154,7 +154,7 @@ set nocompatible
         " Swap files
         let &directory = s:get_cache_dir('swap')
 
-        call EnsureExists(g:settings.cache_dir)
+        call EnsureExists(s:get_cache_dir(''))
         call EnsureExists(&undodir)
         call EnsureExists(&backupdir)
         call EnsureExists(&directory)

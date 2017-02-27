@@ -22,9 +22,7 @@
 " }
 
 " General {
-    Plug 'chriskempson/base16-vim' " {
-        let base16colorspace = 256
-    " }
+    Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-surround'
     Plug 'rhysd/conflict-marker.vim'
     Plug 'jiangmiao/auto-pairs'
