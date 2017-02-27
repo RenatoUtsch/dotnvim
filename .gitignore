@@ -1,2 +1,6 @@
 cache
 plugged
+init.before.vim
+init.after.vim
+plugs.before.vim
+plugs.after.vim

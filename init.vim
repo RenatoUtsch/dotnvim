@@ -28,6 +28,11 @@ set nocompatible
 set termguicolors
 " }
 
+" Custom configuration
+if filereadable(expand("~/.config/dotnvim/init.before.vim"))
+    source ~/.config/dotnvim/init.before.vim
+endif
+
 " dotnvim settings {
     " Default Settings {
         let s:default_settings = {}
@@ -107,7 +112,18 @@ set termguicolors
 " Plugs {
     call plug#begin(s:relative_path('plugged'))
 
+    " Custom configuration
+    if filereadable(s:relative_path("plugs.before.vim"))
+        execute 'source ' . s:relative_path('plugs.before.vim')
+    endif
+
     execute 'source ' . s:relative_path('plugs.vim')
+
+    " Custom configuration
+    if filereadable(s:relative_path("plugs.after.vim"))
+        execute 'source ' . s:relative_path('plugs.after.vim')
+    endif
+
 
     call plug#end()
 " }
@@ -228,3 +244,9 @@ set termguicolors
     " Toggle search highlight with /
     nmap <silent> <leader>/ :set invhlsearch<CR>
 " }
+
+" Custom configuration
+if filereadable(expand("~/.config/dotnvim/init.after.vim"))
+    source ~/.config/dotnvim/init.after.vim
+endif
+
