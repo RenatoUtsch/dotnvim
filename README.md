@@ -38,6 +38,8 @@ alias tmux="env TERM=xterm-256color tmux" # TrueColor on tmux
 ### The status line is showing weird symbols
 This is because [vim-airline](https://github.com/vim-airline/vim-airline) needs special patched fonts "for Powerline" to display properly. These fonts were installed in your system with the distribution, and you need to change the terminal's font to one of them. The available fonts are listed [here](https://github.com/powerline/fonts). I, particularly, use DejaVu Sans Mono Book for Powerline 11 pt.
 
+The Adobe Source Code Pro font seems to already support `vim-airline` by default.
+
 ## Updating
 1. Enter `~/.cache/dotnvim` and run `git pull`
 2. Open vim/neovim and run `:PlugUpgrade`,then `:PlugUpdate` and then `:PlugClean!`

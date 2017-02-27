@@ -32,6 +32,7 @@
     Plug 'vim-airline/vim-airline' " {
         let g:airline_powerline_fonts = 1
     " }
+    Plug 'powerline/fonts', { 'do': './install.sh' }
     Plug 'vim-airline/vim-airline-themes' " {
         let g:airline_theme = g:settings.airline_colorscheme
     " }

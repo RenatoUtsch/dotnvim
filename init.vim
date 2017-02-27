@@ -40,7 +40,7 @@ endif
         let s:default_settings.max_column = 80
         let s:default_settings.colorscheme = 'gruvbox'
         let s:default_settings.airline_colorscheme = 'gruvbox'
-        let s:default_settings.gvim_font = 'DejaVu_Sans_Mono_for_Powerline:h10'
+        let s:default_settings.gvim_font = 'Hack:h10'
         let s:default_settings.cache_dir = 'cache'
         let s:default_settings.config_dir = "~/.config/dotnvim"
     " }
