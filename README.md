@@ -50,8 +50,8 @@ This is because [vim-airline](https://github.com/vim-airline/vim-airline) needs 
 The Adobe Source Code Pro font seems to already support `vim-airline` by default.
 
 ## Updating
-1. Enter `~/.cache/dotnvim` and run `git pull`
-2. Open vim/neovim and run `:PlugUpgrade`,then `:PlugUpdate` and then `:PlugClean!`
+1. Enter `~/.config/dotnvim` and run `git pull`
+2. Open vim/neovim and run `:PlugUpgrade`, then `:PlugInstall!` and then `:PlugClean!`
 
 ## Customization
 You can store your settings to the `~/.config/dotnvim/init.before.vim` and `~/.config/dotnvim/init.after.vim` files, so you don't need to alter the distribution's vimrc file.
