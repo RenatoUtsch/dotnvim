@@ -13,10 +13,10 @@ git clone --recursive https://github.com/RenatoUtsch/dotnvim ~/.config/dotnvim
 mkdir -p ~/.local/share/nvim/site/autoload
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.config/nvim
-ln -fs ~/.config/dotnvim/vim-plug/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
-ln -fs ~/.config/dotnvim/vim-plug/plug.vim ~/.vim/autoload/plug.vim
-ln -fs ~/.config/dotnvim/init.vim ~/.config/nvim/init.vim
-ln -fs ~/.config/dotnvim/init.vim ~/.vimrc
+ln -sf ~/.config/dotnvim/vim-plug/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
+ln -sf ~/.config/dotnvim/vim-plug/plug.vim ~/.vim/autoload/plug.vim
+ln -sf ~/.config/dotnvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/.config/dotnvim/init.vim ~/.vimrc
 ```
 3. Startup neovim, run `:PlugUpgrade` and then `:PlugInstall`
 4. Install the patched font ("The status line is showing weird symbols" section below)
