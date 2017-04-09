@@ -22,6 +22,8 @@
 " }
 
 " General {
+    Plug 'google/vim-maktaba'
+    Plug 'google/vim-glaive'
     Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-surround'
     Plug 'rhysd/conflict-marker.vim'
@@ -62,9 +64,23 @@
 " }
 
 " Programming {
+    Plug 'google/vim-codefmt' " {
+        au BufRead,BufNewFile *.BUILD set filetype=bzl
+        augroup autoformat_settings
+            autocmd FileType bzl AutoFormatBuffer buildifier
+            autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+            autocmd FileType dart AutoFormatBuffer dartfmt
+            autocmd FileType go AutoFormatBuffer gofmt
+            autocmd FileType gn AutoFormatBuffer gn
+            autocmd FileType html,css,json AutoFormatBuffer js-beautify
+            autocmd FileType java AutoFormatBuffer google-java-format
+            autocmd FileType python AutoFormatBuffer yapf
+            " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+        augroup END
+    " }
     Plug 'tpope/vim-commentary'
     Plug 'godlygeek/tabular'
-    Plug 'hail2u/vim-css3-syntax'
-    Plug 'cespare/vim-toml'
+    Plug 'sheerun/vim-polyglot'
     Plug 'dcharbon/vim-flatbuffers'
+    Plug 'kbenzie/vim-spirv'
 " }

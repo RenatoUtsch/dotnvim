@@ -36,13 +36,14 @@ endif
 " dotnvim settings {
     " Default Settings {
         let s:default_settings = {}
-        let s:default_settings.default_indent = 4
+        let s:default_settings.default_indent = 2
         let s:default_settings.max_column = 80
         let s:default_settings.colorscheme = 'gruvbox'
         let s:default_settings.airline_colorscheme = 'gruvbox'
         let s:default_settings.gvim_font = 'Hack:h10'
         let s:default_settings.cache_dir = 'cache'
         let s:default_settings.config_dir = "~/.config/dotnvim"
+        let s:default_settings.google_java_executable = "google-java-format"
     " }
 
     if !exists('g:settings')
@@ -123,7 +124,6 @@ endif
     if filereadable(s:relative_path("plugs.after.vim"))
         execute 'source ' . s:relative_path('plugs.after.vim')
     endif
-
 
     call plug#end()
 " }

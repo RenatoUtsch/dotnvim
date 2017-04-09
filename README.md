@@ -8,16 +8,25 @@ Before installation, ensure that you have either vim8 or neovim installed and up
 ```
 git clone https://github.com/RenatoUtsch/dotnvim ~/.config/dotnvim
 ```
-2. Make the following symlinks to make both Vim and Neovim use dotnvim:
+1. Make the following symlinks to make both Vim and Neovim use dotnvim:
 ```
 ln -s ~/.config/dotnvim/vim-plug ~/.local/share/nvim/site/autoload
 ln -s ~/.config/dotnvim/init.vim ~/.config/nvim/init.vim
 ln -s ~/.config/dotnvim/vim-plug ~/.vim/autoload
 ln -s ~/.config/dotnvim/init.vim ~/.vimrc
 ```
-4. Startup neovim, run `:PlugUpgrade` and then `:PlugInstall`
-5. Install the patched font ("The status line is showing weird symbols" section below)
-6. Done!
+1. Startup neovim, run `:PlugUpgrade` and then `:PlugInstall`
+1. Install the patched font ("The status line is showing weird symbols" section below)
+1. If you want to have vim-codefmt automatically format your code, install the command-line versions of the following dependencies:
+    * Bazel: [buildifier](https://github.com/bazelbuild/buildtools)
+    * C, C++, Protobuf, Javascript: [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
+    * Dart: [dartfmt](https://github.com/dart-lang/dart_style)
+    * Go: [gofmt](https://golang.org/cmd/gofmt/)
+    * Gn: [gn](https://www.chromium.org/developers/how-tos/get-the-code)
+    * HTML, CSS, JSON: [js-beautify](https://github.com/beautify-web/js-beautify)
+    * Java: [google-java-format](https://github.com/google/google-java-format)
+    * Python: [yapf](https://github.com/google/yapf)
+1. Done!
 
 ## Troubleshooting
 ### The colors are messed up
