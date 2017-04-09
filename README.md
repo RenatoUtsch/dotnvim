@@ -6,13 +6,16 @@ Before installation, ensure that you have either vim8 or neovim installed and up
 
 1. Clone this repository to `~/.config/dotnvim` folder by running:
 ```
-git clone https://github.com/RenatoUtsch/dotnvim ~/.config/dotnvim
+git clone --recursive https://github.com/RenatoUtsch/dotnvim ~/.config/dotnvim
 ```
 2. Make the following symlinks to make both Vim and Neovim use dotnvim:
 ```
-ln -s ~/.config/dotnvim/vim-plug ~/.local/share/nvim/site/autoload
+mkdir -p ~/.local/share/nvim/site/autoload
+mkdir -p ~/.vim/autoload
+mkdir -p ~/.config/nvim
+ln -s ~/.config/dotnvim/vim-plug/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
+ln -s ~/.config/dotnvim/vim-plug/plug.vim ~/.vim/autoload/plug.vim
 ln -s ~/.config/dotnvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/.config/dotnvim/vim-plug ~/.vim/autoload
 ln -s ~/.config/dotnvim/init.vim ~/.vimrc
 ```
 3. Startup neovim, run `:PlugUpgrade` and then `:PlugInstall`
