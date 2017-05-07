@@ -24,14 +24,16 @@
 " }
 
 " nocompatible {
-set nocompatible
-set termguicolors
+    set nocompatible
+    set termguicolors
 " }
 
-" Custom configuration
-if filereadable(expand("~/.config/dotnvim/init.before.vim"))
-    source ~/.config/dotnvim/init.before.vim
-endif
+" Custom user code {
+    " TODO(renatoutsch): Unfortunately, no way to use s:relative_path here.
+    if filereadable(expand("~/.config/dotnvim/init.before.vim"))
+        source ~/.config/dotnvim/init.before.vim
+    endif
+" }
 
 " dotnvim settings {
     " Default Settings {
@@ -113,26 +115,34 @@ endif
 " Plugs {
     call plug#begin(s:relative_path('plugged'))
 
-    " Custom configuration
     if filereadable(s:relative_path("plugs.before.vim"))
         execute 'source ' . s:relative_path('plugs.before.vim')
     endif
 
     execute 'source ' . s:relative_path('plugs.vim')
 
-    " Custom configuration
     if filereadable(s:relative_path("plugs.after.vim"))
         execute 'source ' . s:relative_path('plugs.after.vim')
     endif
 
     call plug#end()
+
+    if filereadable(s:relative_path("plugs.config.before.vim"))
+        execute 'source ' . s:relative_path('plugs.config.before.vim')
+    endif
+
+    execute 'source ' . s:relative_path('plugs.config.vim')
+
+    if filereadable(s:relative_path("plugs.config.after.vim"))
+        execute 'source ' . s:relative_path('plugs.config.after.vim')
+    endif
 " }
 
 " General {
     set background=dark         " Assume dark background
 
     if has("unnamedplus") " Use + register when possible for copy-paste.
-        set clipboard=unnamed,unnamedplus.
+        set clipboard=unnamed,unnamedplus
     else " On Windows, use * for copy-paste.
         set clipboard=unnamed
     endif
@@ -245,8 +255,8 @@ endif
     nmap <silent> <leader>/ :set invhlsearch<CR>
 " }
 
-" Custom configuration
-if filereadable(expand("~/.config/dotnvim/init.after.vim"))
-    source ~/.config/dotnvim/init.after.vim
-endif
-
+" Custom user code {
+    if filereadable(s:relative_path("init.after.vim"))
+        execute 'source ' . s:relative_path('init.after.vim')
+    endif
+" }

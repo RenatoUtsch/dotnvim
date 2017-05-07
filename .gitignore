@@ -4,3 +4,5 @@ init.before.vim
 init.after.vim
 plugs.before.vim
 plugs.after.vim
+plugs.config.before.vim
+plugs.config.after.vim

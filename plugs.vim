@@ -17,70 +17,37 @@
 " limitations under the License.
 " }
 
-" vim-neovim {
-    Plug 'noahfrederick/vim-neovim-defaults'
-" }
+Plug 'noahfrederick/vim-neovim-defaults'
+Plug 'morhetz/gruvbox'
 
-" General {
-    Plug 'google/vim-maktaba'
-    Plug 'google/vim-glaive'
-    Plug 'morhetz/gruvbox'
-    Plug 'tpope/vim-surround'
-    Plug 'rhysd/conflict-marker.vim'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'benjifisher/matchit.zip' " {
-        let b:match_ignorecase = 1
-    " }
-    Plug 'vim-airline/vim-airline' " {
-        let g:airline_powerline_fonts = 1
-    " }
-    Plug 'powerline/fonts', { 'do': './install.sh' }
-    Plug 'vim-airline/vim-airline-themes' " {
-        let g:airline_theme = g:settings.airline_colorscheme
-    " }
-    Plug 'bling/vim-bufferline'
-    Plug 'mbbill/undotree' " {
-        nnoremap <Leader>u :UndotreeToggle<CR>
-        " If undotree is opened, it is likely one wants to interact with it
-        let g:undotree_SetFocusWhenToggle = 1
-    " }
-    Plug 'nathanaelkane/vim-indent-guides' " {
-        let g:indent_guides_start_level = 2
-        let g:indent_guides_size = 1
-        let g:indent_guides_enable_on_vim_startup = 1
-    " }
-    Plug 'vim-scripts/restore_view.vim'
-    Plug 'mhinz/vim-signify'
-    Plug 'gcmt/wildfire.vim' " {{
-        let g:wildfire_objects = {
-            \ "*" : ["i'", 'i"', "i)", "i]", "i}", "ip"],
-            \ "html,xml" : ["at"],
-            \ }
-    " }}
-    Plug 'myusuf3/numbers.vim'
-    if executable('ag') " {
-        Plug 'rking/ag.vim'
-    endif
-" }
+Plug 'google/vim-maktaba'
+Plug 'google/vim-glaive'
 
-" Programming {
-    Plug 'google/vim-codefmt' " {
-        au BufRead,BufNewFile *.BUILD set filetype=bzl
-        augroup autoformat_settings
-            autocmd FileType bzl AutoFormatBuffer buildifier
-            autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-            autocmd FileType dart AutoFormatBuffer dartfmt
-            autocmd FileType go AutoFormatBuffer gofmt
-            autocmd FileType gn AutoFormatBuffer gn
-            autocmd FileType html,css,json AutoFormatBuffer js-beautify
-            autocmd FileType java AutoFormatBuffer google-java-format
-            autocmd FileType python AutoFormatBuffer yapf
-            " Alternative: autocmd FileType python AutoFormatBuffer autopep8
-        augroup END
-    " }
-    Plug 'tpope/vim-commentary'
-    Plug 'godlygeek/tabular'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'dcharbon/vim-flatbuffers'
-    Plug 'kbenzie/vim-spirv'
-" }
+Plug 'bling/vim-bufferline'
+Plug 'powerline/fonts', { 'do': './install.sh' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'google/vim-codefmt'
+Plug 'mhinz/vim-signify'
+Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+
+Plug 'benjifisher/matchit.zip'
+Plug 'gcmt/wildfire.vim'
+Plug 'godlygeek/tabular'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mbbill/undotree'
+Plug 'myusuf3/numbers.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rhysd/conflict-marker.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/restore_view.vim'
+
+Plug 'dcharbon/vim-flatbuffers'
+Plug 'kbenzie/vim-spirv'
+Plug 'sheerun/vim-polyglot'
+
+if executable('ag')
+    Plug 'rking/ag.vim'
+endif
