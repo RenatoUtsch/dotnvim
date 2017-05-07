@@ -27,6 +27,7 @@ Plug 'bling/vim-bufferline'
 Plug 'powerline/fonts', { 'do': './install.sh' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 
 Plug 'google/vim-codefmt'
 Plug 'mhinz/vim-signify'
