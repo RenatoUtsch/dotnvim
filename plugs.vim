@@ -33,6 +33,7 @@ Plug 'google/vim-codefmt'
 Plug 'mhinz/vim-signify'
 Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 
+Plug 'alvan/vim-closetag'
 Plug 'benjifisher/matchit.zip'
 Plug 'gcmt/wildfire.vim'
 Plug 'godlygeek/tabular'
