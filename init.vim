@@ -228,6 +228,9 @@
 
     " Remove trailing whitespaces and ^M chars
     autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+    " Remove python PEP8 recommended style.
+    let g:python_recommended_style = 0
 " }
 
 " Key (re)mappings {
