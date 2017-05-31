@@ -46,8 +46,8 @@
     augroup END
 " }
 " neomake/neomake {
-    let g:neomake_open_list = 2
     autocmd! BufWritePost * Neomake
+    let g:neomake_javascript_enabled_makers = ['eslint']
 " }
 
 " benjifisher/matchit.zip { 

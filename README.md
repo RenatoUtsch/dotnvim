@@ -1,3 +1,7 @@
+# Deprecated
+
+This repository has been deprecated in favor of [RenatoUtsch/dotfiles](https://github.com/RenatoUtsch/dotfiles). I strongly encourage you to take a look at it, as it integrates vim with other terminal tools.
+
 # RenatoUtsch's dotnvim
 This is a distribution built for both vim8 and neovim, with extensibility and performance in mind. It is largely based on [spf13-vim](https://github.com/spf13/spf13-vim) and [bling.vim](https://github.com/bling/dotvim).
 

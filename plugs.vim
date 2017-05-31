@@ -18,20 +18,26 @@
 " }
 
 Plug 'noahfrederick/vim-neovim-defaults'
+
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
 Plug 'morhetz/gruvbox'
 
 Plug 'google/vim-maktaba'
 Plug 'google/vim-glaive'
 
 Plug 'bling/vim-bufferline'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'powerline/fonts', { 'do': './install.sh' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
+
+" Tmuxline with 24-bit True Color support.
+Plug 'weihanglo/tmuxline.vim'
 
 Plug 'google/vim-codefmt'
 Plug 'mhinz/vim-signify'
-Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+Plug 'neomake/neomake'
 
 Plug 'alvan/vim-closetag'
 Plug 'benjifisher/matchit.zip'
